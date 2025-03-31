@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #1f1f1f);
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: #ff004e;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.button:hover {
+    transform: scale(1.1);
+}
+.about-section, .projects-section {
+    padding: 50px;
+    background: #1a1a1a;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+.project-card {
+    background: #222;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+    width: 70%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
