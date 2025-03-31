@@ -3,65 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiance's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Radiance Esteban's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff004e);
-            color: white;
+            font-family: 'Inter', sans-serif;
+            background: #121212;
+            color: #ffffff;
             text-align: center;
             overflow-x: hidden;
         }
         .container {
             padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         h1 {
             font-size: 3rem;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-            animation: glow 2s infinite alternate;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 1.5s ease-in-out;
         }
-        @keyframes glow {
+        @keyframes fadeIn {
             from {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+                opacity: 0;
+                transform: translateY(-20px);
             }
             to {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         .button {
             padding: 15px 30px;
             font-size: 1.2rem;
-            color: white;
-            background: #ff004e;
-            border: none;
-            border-radius: 30px;
+            font-weight: 600;
+            color: #ffffff;
+            background: #1f1f1f;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            transition: transform 0.3s;
+            transition: all 0.3s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
         .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            background: #ffffff;
+            color: #121212;
         }
         .about {
-            margin-top: 50px;
-            font-size: 1.2rem;
+            margin-top: 20px;
+            font-size: 1rem;
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 20px;
+            padding: 15px;
+            border-radius: 5px;
             display: inline-block;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            animation: fadeIn 2s ease-in-out;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Radiance's World ✨</h1>
-        <p class="about">Creative. Passionate. Unique. Let’s build something extraordinary!</p>
-        <button class="button">Explore More</button>
+        <h1>Radiance Esteban's Portfolio</h1>
+        <p class="about">Radiance in Design, Excellence in Execution.</p>
+        <button class="button">Explore</button>
     </div>
 </body>
 </html>
