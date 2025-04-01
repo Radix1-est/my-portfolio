@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -6,8 +7,10 @@ body {
     color: #ffffff; /* White text color */
     text-align: center;
     overflow-x: hidden;
+    position: relative; /* Set position for absolute elements */
 }
 
+/* Header Styles */
 header {
     background: #1f1f1f; /* Dark header background */
     padding: 10px;
@@ -24,10 +27,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff; /* White text for navigation links */
+    text-decoration: none; /* Remove underline */
 }
 
+/* Container Styles */
 .container {
     padding: 50px;
     display: flex;
@@ -36,21 +40,23 @@ nav ul li a {
     background-color: #121212; /* Ensures sections are dark */
 }
 
+/* Heading Styles */
 h1, h2, h3 {
     color: #ffffff; /* Text color for headings */
     margin: 20px 0; /* Add margin for spacing */
 }
 
+/* Button Styles */
 .button {
     padding: 15px 30px;
     font-size: 1.2rem;
     font-weight: 600;
     color: #ffffff;
-    background: #1f1f1f;
-    border: 2px solid #ffffff;
+    background: #1f1f1f; /* Dark button background */
+    border: 2px solid #ffffff; /* White border */
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; /* Transition effect */
 }
 
 .button:hover {
@@ -58,61 +64,71 @@ h1, h2, h3 {
     color: #121212; /* Change text color on hover */
 }
 
+/* Skills Container Styles */
 .skills-container {
     margin: 20px 0;
 }
 
 .skill {
-    margin: 10px 0;
+    margin: 10px 0; /* Space between skills */
 }
 
+/* Skill Meter Styles */
 .skill-meter {
     height: 10px;
     background: #4caf50; /* Skill meter color */
     border-radius: 5px;
-    transition: width 0.4s;
+    transition: width 0.4s; /* Smooth width transition */
 }
 
+/* Project Grid Styles */
 .project-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Space between project cards */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 .project-card {
     background: #1f1f1f; /* Dark background for project cards */
     padding: 20px;
     border-radius: 5px;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Smooth hover effect */
+    width: 300px; /* Fixed width for project cards */
+    margin: 10px; /* Space around cards */
 }
 
 .project-card:hover {
     transform: scale(1.05); /* Scale effect on hover */
 }
 
+/* Testimonial Slider Styles */
 .testimonial-slider {
     margin: 20px auto;
-    width: 60%;
+    width: 60%; /* Center the testimonials */
     background: #222; /* Dark background for testimonials */
     padding: 20px;
     border-radius: 5px;
 }
 
 .testimonial {
-    margin: 10px 0;
+    margin: 10px 0; /* Space between testimonials */
 }
 
+/* Contact Form Styles */
 #contactForm {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    margin-top: 20px; /* Space above the form */
 }
 
 #contactForm input, #contactForm textarea {
-    width: 80%;
+    width: 80%; /* Width of the form fields */
     padding: 10px;
-    margin: 5px 0;
+    margin: 5px 0; /* Space between fields */
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
 }
 
 #contactForm button {
@@ -122,4 +138,14 @@ h1, h2, h3 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Canvas Styles */
+#interactive-bg {
+    position: absolute; /* Allow it to overlay other elements */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Send it to the back */
 }

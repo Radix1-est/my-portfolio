@@ -36,15 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
             p.x += p.speedX;
             p.y += p.speedY;
 
+            // Bounce off walls
             if (p.x > canvas.width || p.x < 0) p.speedX *= -1;
             if (p.y > canvas.height || p.y < 0) p.speedY *= -1;
 
+            // Draw the particle
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
             ctx.fillStyle = p.color;
             ctx.fill();
         });
-        requestAnimationFrame(animate);
+        requestAnimationFrame(animate); // Request the next animation frame
     }
-    animate();
+    animate(); // Start the animation
 });
