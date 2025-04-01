@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Get the explore button and contact form elements
+    const exploreBtn = document.getElementById("exploreBtn");
+    const contactForm = document.getElementById("contactForm");
+
+    // Check if elements exist before adding event listeners
+    if (exploreBtn) {
+        exploreBtn.addEventListener("click", function() {
+            location.href = 'about.html';
+        });
+    }
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for your message!");
+            contactForm.reset(); // Reset form after submission
+        });
+    }
+
+    // Interactive Background (Starry Night Sky Animation)
     const canvas = document.getElementById("interactive-bg");
     const ctx = canvas.getContext("2d");
 
