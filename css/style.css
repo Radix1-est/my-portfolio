@@ -152,3 +152,32 @@ h1, h2, h3 {
     height: 100%; /* Full height */
     z-index: -1; /* Send it to the back */
 }
+/* Additional Styles for the About Page */
+.skills-container {
+    display: flex;
+    justify-content: space-around; /* Space between skill cards */
+    margin: 20px 0;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 5px;
+    padding: 15px;
+    width: 30%; /* Width of the skill card */
+    text-align: left;
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.skill-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+h2 {
+    margin-top: 40px; /* Add margin for top spacing */
+}
+
+h3 {
+    margin-top: 20px; /* Add margin for top spacing */
+    color: #4caf50; /* Use a different color for subheadings */
+}
