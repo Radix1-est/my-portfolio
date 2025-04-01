@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Array to hold stars
     const stars = [];
-    const numStars = 100; // Number of stars
+    const numStars = 200; // Number of stars
 
     // Create stars
     for (let i = 0; i < numStars; i++) {

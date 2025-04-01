@@ -5,7 +5,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #121212; /* Dark background */
     color: #ffffff; /* White text color */
-    text-align: center;
+    text-align: center;  
     overflow-x: hidden;
     position: relative; /* Set position for absolute elements */
 }
@@ -14,6 +14,7 @@ body {
 header {
     background: #1f1f1f; /* Dark header background */
     padding: 10px;
+    z-index: 1; /* Ensure header is above canvas */
 }
 
 nav ul {
@@ -37,7 +38,9 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center align items */
-    background-color: #121212; /* Ensures sections are dark */
+    background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent background to show stars */
+    position: relative; /* Position relative for stacking context */
+    z-index: 2; /* Ensure content is above the canvas */
 }
 
 /* Heading Styles */
@@ -148,67 +151,4 @@ h1, h2, h3 {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     z-index: -1; /* Send it to the back */
-}
-
-/* Additional Title Styles */
-.title h1 {
-    font-size: 36px;
-    font-family: 'Lato', sans-serif;
-    margin-top: 10em;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-
-    /* Styling the text and giving it gradient */
-    color: #ffffff;
-    background: -webkit-linear-gradient(#eee, #333);
-    background-clip: text; /* Add standard property */
-    -webkit-background-clip: text; /* Vendor prefix */
-    -webkit-text-fill-color: transparent;
-    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
-
-    /* Make sure text is in front of background images */
-    display: block;
-    position: relative;
-    z-index: 3;
-}
-
-/* Keyframes for background animation */
-@keyframes move-twink-back {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 5000px; }
-}
-
-@keyframes move-clouds-back {
-    from { background-position: 0 0; }
-    to { background-position: 10000px 0; }
-}
-
-/* Background elements for starry night effect */
-.stars, .twinkling, .clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.stars {
-    background: #000 url(stars.png) repeat top center;
-    z-index: 0;
-}
-
-.twinkling {
-    background: transparent url(twinkling.png) repeat top center;
-    z-index: 1;
-    animation: move-twink-back 200s linear infinite;
-}
-
-.clouds {
-    background: transparent url(clouds.png) repeat top center;
-    z-index: 2;
-    opacity: 0.4;
-    animation: move-clouds-back 200s linear infinite;
 }
