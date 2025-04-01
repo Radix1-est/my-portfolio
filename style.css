@@ -2,11 +2,30 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background: #121212;
-    color: #ffffff;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text color */
     text-align: center;
     overflow-x: hidden;
-    transition: background-color 0.3s;
+}
+
+header {
+    background: #1f1f1f; /* Dark header background */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .container {
@@ -44,7 +63,7 @@ h1, h2, h3 {
 
 .skill-meter {
     height: 10px;
-    background: #4caf50;
+    background: #4caf50; /* Skill meter color */
     border-radius: 5px;
     transition: width 0.4s;
 }
@@ -55,7 +74,7 @@ h1, h2, h3 {
 }
 
 .project-card {
-    background: #1f1f1f;
+    background: #1f1f1f; /* Dark background for project cards */
     padding: 20px;
     border-radius: 5px;
     transition: transform 0.3s;
@@ -68,7 +87,7 @@ h1, h2, h3 {
 .testimonial-slider {
     margin: 20px auto;
     width: 60%;
-    background: #222;
+    background: #222; /* Dark background for testimonials */
     padding: 20px;
     border-radius: 5px;
 }
@@ -93,7 +112,7 @@ h1, h2, h3 {
 
 #contactForm button {
     padding: 10px 20px;
-    background: #4caf50;
+    background: #4caf50; /* Dark button color */
     color: white;
     border: none;
     border-radius: 5px;
