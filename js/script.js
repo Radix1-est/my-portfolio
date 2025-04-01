@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = 'about.html';
     });
 
-    // Optional: Code for the interactive background can go here if you have it
+    // Interactive background code (if you have it)
     const canvas = document.getElementById("interactive-bg");
     const ctx = canvas.getContext("2d");
 
