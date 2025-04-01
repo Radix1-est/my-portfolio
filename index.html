@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-
     <title>Radiance Esteban's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             margin: 0;
@@ -69,13 +67,26 @@
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
             animation: fadeIn 2s ease-in-out;
         }
+        .extra-content {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Radiance Esteban's Portfolio</h1>
         <p class="about">Radiance in Design, Excellence in Execution.</p>
-        <button class="button">Explore</button>
+        <button id="exploreBtn" class="button">Explore</button>
     </div>
+    <div id="content"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
