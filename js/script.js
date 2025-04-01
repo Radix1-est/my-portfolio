@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const exploreBtn = document.getElementById("exploreBtn");
+    
+    // Add event listener for the Explore button
+    exploreBtn.addEventListener("click", function() {
+        // Redirect to about.html when the button is clicked
+        window.location.href = 'about.html';
+    });
+
+    // Optional: Code for the interactive background can go here if you have it
     const canvas = document.getElementById("interactive-bg");
     const ctx = canvas.getContext("2d");
 
