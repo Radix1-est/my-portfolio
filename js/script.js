@@ -1,104 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Elements
     const exploreBtn = document.getElementById("exploreBtn");
     const contactForm = document.getElementById("contactForm");
 
+    // Explore button click event
     exploreBtn.addEventListener("click", function() {
         location.href = 'about.html';
     });
 
+    // Contact form submission event
     contactForm.addEventListener("submit", function(event) {
         event.preventDefault();
         alert("Thank you for your message!");
         contactForm.reset(); // Reset form after submission
     });
 
-    // Interactive Background (Canvas Animation)
+    // Interactive Background (Starry Night Sky Animation)
     const canvas = document.getElementById("interactive-bg");
     const ctx = canvas.getContext("2d");
+
+    // Set canvas dimensions
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    let particles = [];
-    for (let i = 0; i < 100; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 5 + 1,
-            color: "rgba(255, 255, 255, 0.8)",
-            speedX: (Math.random() - 0.5) * 2,
-            speedY: (Math.random() - 0.5) * 2
+    // Array to hold stars
+    const stars = [];
+    const numStars = 100; // Number of stars
+
+    // Create stars
+    for (let i = 0; i < numStars; i++) {
+        stars.push({
+            x: Math.random() * canvas.width,  // Random x position
+            y: Math.random() * canvas.height, // Random y position
+            radius: Math.random() * 2 + 1,    // Random radius
+            speed: Math.random() * 0.5 + 0.5   // Random speed
         });
     }
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            p.x += p.speedX;
-            p.y += p.speedY;
-
-            // Bounce off walls
-            if (p.x > canvas.width || p.x < 0) p.speedX *= -1;
-            if (p.y > canvas.height || p.y < 0) p.speedY *= -1;
-
-            // Draw the particle
+    // Function to draw stars
+    function drawStars() {
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'; // White stars
+        stars.forEach(star => {
             ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
+            ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
             ctx.fill();
+
+            // Move stars down
+            star.y += star.speed;
+            // Reset star position to top if it moves out of the canvas
+            if (star.y > canvas.height) {
+                star.y = 0;
+                star.x = Math.random() * canvas.width; // Random x position when reset
+            }
         });
+    }
+
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+        drawStars(); // Draw stars
         requestAnimationFrame(animate); // Request the next animation frame
     }
-    animate(); // Start the animation
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const exploreBtn = document.getElementById("exploreBtn");
-    const contactForm = document.getElementById("contactForm");
 
-    exploreBtn.addEventListener("click", function() {
-        location.href = 'about.html';
-    });
-
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        alert("Thank you for your message!");
-        contactForm.reset(); // Reset form after submission
-    });
-
-    // Interactive Background (Canvas Animation)
-    const canvas = document.getElementById("interactive-bg");
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let particles = [];
-    for (let i = 0; i < 100; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 5 + 1,
-            color: "rgba(255, 255, 255, 0.8)",
-            speedX: (Math.random() - 0.5) * 2,
-            speedY: (Math.random() - 0.5) * 2
-        });
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            p.x += p.speedX;
-            p.y += p.speedY;
-
-            // Bounce off walls
-            if (p.x > canvas.width || p.x < 0) p.speedX *= -1;
-            if (p.y > canvas.height || p.y < 0) p.speedY *= -1;
-
-            // Draw the particle
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
-            ctx.fill();
-        });
-        requestAnimationFrame(animate); // Request the next animation frame
-    }
     animate(); // Start the animation
 });
