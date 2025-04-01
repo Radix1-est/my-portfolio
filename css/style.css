@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #121212; /* Set dark background */
-    color: #ffffff; /* White text */
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text color */
     text-align: center;
     overflow-x: hidden;
 }
@@ -30,11 +30,11 @@ nav ul li a {
 
 .container {
     padding: 50px;
-    background-color: #121212; /* Ensuring container background is dark */
+    background-color: #121212; /* Ensures sections are dark */
 }
 
 h1, h2, h3 {
-    color: #ffffff; /* Text color for headings */
+    color: #ffffff;
 }
 
 .button {
@@ -50,8 +50,8 @@ h1, h2, h3 {
 }
 
 .button:hover {
-    background: #ffffff; /* Button hover effect */
-    color: #121212; /* Change text color on hover */
+    background: #ffffff;
+    color: #121212;
 }
 
 .skills-container {
@@ -82,7 +82,7 @@ h1, h2, h3 {
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05);
 }
 
 .testimonial-slider {
@@ -113,7 +113,7 @@ h1, h2, h3 {
 
 #contactForm button {
     padding: 10px 20px;
-    background: #4caf50; /* Dark button color */
+    background: #4caf50; /* Button color */
     color: white;
     border: none;
     border-radius: 5px;
