@@ -24,8 +24,8 @@
     <section id="home" class="container">
         <h1 class="animated-text">Radiance Esteban</h1>
         <p class="motto">Designing with Radiance, Developing with Precision.</p>
-        <canvas id="interactive-bg"></canvas> <!-- Starry night sky canvas -->
-        <button class="button" onclick="location.href='about.html'">Explore</button>
+        <canvas id="interactive-bg"></canvas> <!-- Canvas for starry night sky -->
+        <button id="exploreBtn" class="button">Explore</button> <!-- Ensure this has the correct ID -->
     </section>
     
     <section id="about" class="container">
@@ -87,7 +87,7 @@
     <section id="contact" class="container">
         <h2>Contact Me</h2>
         <p>Let's connect! Reach me via email or social media.</p>
-        <form id="contactForm">
+        <form id="contactForm"> <!-- Ensure this has the correct ID -->
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
