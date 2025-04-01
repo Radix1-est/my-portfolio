@@ -38,6 +38,21 @@
             <li>Backend Development (Node.js, Express, MongoDB)</li>
             <li>Project Management & Agile Development</li>
         </ul>
+        <h3>Skills</h3>
+        <div class="skills-container">
+            <div class="skill">
+                <span>HTML</span>
+                <div class="skill-meter" style="width: 90%;"></div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="skill-meter" style="width: 85%;"></div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="skill-meter" style="width: 80%;"></div>
+            </div>
+        </div>
     </section>
     
     <section id="projects" class="container">
@@ -56,10 +71,33 @@
         </div>
     </section>
     
+    <section id="testimonials" class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <blockquote>"Radiance is a visionary developer!"</blockquote>
+                <cite>- CEO, TechCorp</cite>
+            </div>
+            <div class="testimonial">
+                <blockquote>"An outstanding professional with exceptional skills!"</blockquote>
+                <cite>- Lead Designer, Creative Studios</cite>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="container">
         <h2>Contact Me</h2>
         <p>Let's connect! Reach me via email or social media.</p>
-        <a href="mailto:radiance@example.com">Email Me</a>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
+    
+    <footer>
+        <p>&copy; 2025 Radiance Esteban | All Rights Reserved</p>
+    </footer>
 </body>
 </html>

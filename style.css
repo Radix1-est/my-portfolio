@@ -3,56 +3,99 @@ body {
     padding: 0;
     font-family: 'Inter', sans-serif;
     background: #121212;
-    color: white;
+    color: #ffffff;
     text-align: center;
+    overflow-x: hidden;
+    transition: background-color 0.3s;
 }
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #000000, #1f1f1f);
+
+.container {
+    padding: 50px;
 }
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
+
+h1, h2, h3 {
+    color: #ffffff;
 }
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 .button {
     padding: 15px 30px;
     font-size: 1.2rem;
+    font-weight: 600;
     color: #ffffff;
-    background: #ff004e;
-    border: none;
-    border-radius: 30px;
+    background: #1f1f1f;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #ffffff;
+    color: #121212;
+}
+
+.skills-container {
+    margin: 20px 0;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+.skill-meter {
+    height: 10px;
+    background: #4caf50;
+    border-radius: 5px;
+    transition: width 0.4s;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-card {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
     transition: transform 0.3s;
 }
-.button:hover {
-    transform: scale(1.1);
+
+.project-card:hover {
+    transform: scale(1.05);
 }
-.about-section, .projects-section {
-    padding: 50px;
-    background: #1a1a1a;
+
+.testimonial-slider {
     margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-}
-.project-card {
+    width: 60%;
     background: #222;
     padding: 20px;
-    margin: 10px auto;
-    border-radius: 8px;
-    width: 70%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.testimonial {
+    margin: 10px 0;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
