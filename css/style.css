@@ -30,11 +30,15 @@ nav ul li a {
 
 .container {
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
     background-color: #121212; /* Ensures sections are dark */
 }
 
 h1, h2, h3 {
-    color: #ffffff;
+    color: #ffffff; /* Text color for headings */
+    margin: 20px 0; /* Add margin for spacing */
 }
 
 .button {
@@ -50,8 +54,8 @@ h1, h2, h3 {
 }
 
 .button:hover {
-    background: #ffffff;
-    color: #121212;
+    background: #ffffff; /* Button hover effect */
+    color: #121212; /* Change text color on hover */
 }
 
 .skills-container {
@@ -82,7 +86,7 @@ h1, h2, h3 {
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 .testimonial-slider {
@@ -113,7 +117,7 @@ h1, h2, h3 {
 
 #contactForm button {
     padding: 10px 20px;
-    background: #4caf50; /* Button color */
+    background: #4caf50; /* Dark button color */
     color: white;
     border: none;
     border-radius: 5px;
