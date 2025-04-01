@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="interactive-bg"></canvas> <!-- Canvas for starry night sky -->
     <header>
         <nav>
             <ul>
@@ -24,8 +25,7 @@
     <section id="home" class="container">
         <h1 class="animated-text">Radiance Esteban</h1>
         <p class="motto">Designing with Radiance, Developing with Precision.</p>
-        <canvas id="interactive-bg"></canvas> <!-- Canvas for starry night sky -->
-        <button id="exploreBtn" class="button">Explore</button> <!-- Ensure this has the correct ID -->
+        <button id="exploreBtn" class="button">Explore</button> <!-- Button for navigation -->
     </section>
     
     <section id="about" class="container">
@@ -87,7 +87,7 @@
     <section id="contact" class="container">
         <h2>Contact Me</h2>
         <p>Let's connect! Reach me via email or social media.</p>
-        <form id="contactForm"> <!-- Ensure this has the correct ID -->
+        <form id="contactForm"> <!-- ID for the contact form -->
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>

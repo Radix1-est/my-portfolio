@@ -142,7 +142,7 @@ h1, h2, h3 {
 
 /* Canvas Styles */
 #interactive-bg {
-    position: absolute; /* Allow it to overlay other elements */
+    position: fixed; /* Fixed position to overlay on all sections */
     top: 0;
     left: 0;
     width: 100%; /* Full width */
