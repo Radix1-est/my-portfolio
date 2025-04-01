@@ -4,66 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Radiance Esteban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #121212;
-            color: #ffffff;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            color: #ffffff;
-            background: #1f1f1f;
-            border: 2px solid #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-        }
-        .button:hover {
-            background: #ffffff;
-            color: #121212;
-        }
-    </style>
 </head>
 <body>
-    <h1>About Me</h1>
-    <div class="content">
-        <h2>Skills & Experience</h2>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer dedicated to creating modern, responsive, and visually appealing websites that enhance user experience.</p>
+        
+        <h3>Skills & Experience</h3>
         <ul>
             <li>Frontend Development (HTML, CSS, JavaScript, React)</li>
             <li>UI/UX Design & Prototyping</li>
             <li>Backend Development (Node.js, Express, MongoDB)</li>
             <li>Project Management & Agile Development</li>
         </ul>
-
-        <h2>Education & Certifications</h2>
+        
+        <h3>Education & Certifications</h3>
         <ul>
             <li>Bachelor's Degree in Computer Science</li>
             <li>Certified Full-Stack Web Developer</li>
+            <li>UI/UX Design Certification</li>
         </ul>
-
-        <h2>Awards & Accomplishments</h2>
+        
+        <h3>Awards & Accomplishments</h3>
         <ul>
             <li>Top 10 in National Web Design Competition</li>
             <li>Best UI/UX Design Award 2024</li>
+            <li>Recognized for Outstanding Contribution in Web Development</li>
         </ul>
-
+        
         <a href="index.html" class="button">Go Back</a>
-    </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Radiance Esteban | All Rights Reserved</p>
+    </footer>
 </body>
 </html>

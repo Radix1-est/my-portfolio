@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const exploreBtn = document.getElementById("exploreBtn");
-    const darkModeToggle = document.getElementById("darkModeToggle");
     const contactForm = document.getElementById("contactForm");
 
     exploreBtn.addEventListener("click", function() {
         location.href = 'about.html';
     });
-
-    darkModeToggle.addEventListener("click", toggleDarkMode);
 
     contactForm.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -51,7 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     animate();
 });
-
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
