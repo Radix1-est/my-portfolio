@@ -181,3 +181,54 @@ h3 {
     margin-top: 20px; /* Add margin for top spacing */
     color: #4caf50; /* Use a different color for subheadings */
 }
+.name-title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8c00, #ff2d55, #8a2be2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.6);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.6); }
+    100% { text-shadow: 0px 0px 20px rgba(255, 0, 255, 1); }
+}
+.typing-effect::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.project-card {
+    perspective: 1000px;
+}
+
+.project-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+.project-card-front, .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.project-card-back {
+    background: #1f1f1f;
+    transform: rotateY(180deg);
+}
+

@@ -56,3 +56,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animate(); // Start the animation
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const nameTitle = document.querySelector(".name-title");
+    const nameText = "Radiance Esteban";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < nameText.length) {
+            nameTitle.textContent += nameText[index];
+            index++;
+            setTimeout(typeEffect, 150);
+        }
+    }
+
+    typeEffect();
+});
