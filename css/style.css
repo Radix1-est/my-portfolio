@@ -268,39 +268,3 @@ h3 {
     from { transform: translateY(0); }
     to { transform: translateY(-20px); }
 }
-.name-title {
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-    color: #0ff; /* Neon Cyan */
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
-    animation: flicker 1.5s infinite alternate;
-}
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.8; }
-    100% { opacity: 1; }
-}
-.glow-text {
-    font-size: 3rem; /* Adjust size */
-    font-weight: bold;
-    color: #0ff; /* Neon Cyan */
-    text-shadow: 
-        0 0 5px #0ff, 
-        0 0 10px #0ff, 
-        0 0 20px #0ff, 
-        0 0 40px #0ff;
-    animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
-    }
-    100% {
-        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 50px #0ff;
-    }
-}
-
-
