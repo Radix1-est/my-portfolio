@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,31 @@
     <script defer src="js/script.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional CSS for styling the profile image */
+        .profile-image {
+            width: 150px;
+            /* Adjust as necessary */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 50%;
+            /* Makes the image circular */
+            margin-bottom: 20px;
+            /* Adds space below the image */
+            display: block;
+            /* Centers the image */
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #fff;
+            /* Optional: adds a border around the image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Optional: adds shadow for depth */
+        }
+
+        /* Add more styles as needed */
+    </style>
 </head>
+
 <body>
     <canvas id="interactive-bg"></canvas> <!-- Starry night sky canvas -->
     <header>
@@ -21,15 +46,17 @@
             </ul>
         </nav>
     </header>
-    
+
     <section id="home" class="container">
         <h1 class="cyberpunk-name">Radiance Esteban</h1>
         <p class="motto">Radiating Inspiration, Shaping Tomorrow.</p>
         <button id="exploreBtn" class="button">Explore</button>
     </section>
-    
+
     <section id="about" class="container">
         <h2>About Me</h2>
+        <img src="488510474_1704779686783983_4623485397270746873_n.jpg" alt="Radiance Esteban" class="profile-image">
+        <!-- Replace with your actual image path -->
         <p>A passionate web developer with a knack for creating stunning and functional digital experiences.</p>
         <ul>
             <li>Frontend Development (HTML, CSS, JavaScript, React)</li>
@@ -53,7 +80,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="projects" class="container">
         <h2>Projects</h2>
         <div class="project-grid">
@@ -65,8 +92,8 @@
             <div class="project-card">
                 <h3>Likhub</h3>
                 <p>Share your inventions and help others with their innovations.</p>
-                <img src="images/likhub-image.jpg" alt="Likhub Project Image" class="project-image"> <!-- Replace with your actual image path -->
-                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FZoro330%2FLikhub.git%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1FhxlPQuDZmJ_4P4AH8xaxg0bQI6_MSc7y4IPSFvr2Tf7BTYvSxXhPrS0_aem_uR28D3MNj4-ffdVUkZkL_g&h=AT3-yJG6528ZnWiCl21vCfda1bAns4QuLi-C-B3RXtYz49TPOUlBKVuspw6INe-K-eUzjpkBs9HVae8p2K6FOeyoey2-J7iqbTKrQErinJlT1quQrJ86ESZ0sVsPjKJcFH_aow" target="_blank">View Project</a>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2FZoro330%2FLikhub.git%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR1FhxlPQuDZmJ_4P4AH8xaxg0bQI6_MSc7y4IPSFvr2Tf7BTYvSxXhPrS0_aem_uR28D3MNj4-ffdVUkZkL_g&h=AT3-yJG6528ZnWiCl21vCfda1bAns4QuLi-C-B3RXtYz49TPOUlBKVuspw6INe-K-eUzjpkBs9HVae8p2K6FOeyoey2-J7iqbTKrQErinJlT1quQrJ86ESZ0sVsPjKJcFH_aow"
+                    target="_blank">View Project</a>
             </div>
             <div class="project-card">
                 <h3>Project 2</h3>
@@ -75,7 +102,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="testimonials" class="container">
         <h2>Testimonials</h2>
         <div class="testimonial-slider">
@@ -100,9 +127,10 @@
             <button type="submit">Send Message</button>
         </form>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Radiance Esteban | All Rights Reserved</p>
     </footer>
 </body>
+
 </html>
